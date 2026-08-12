@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className={dark ? "shell dark" : "shell"}>
       <aside className="sidebar">
-        <div className="brand"><span className="brand-mark">S</span><span>SiteTrack <em>Pro</em></span></div>
+        <div className="brand"><span className="brand-mark" aria-hidden="true"><span>S</span><i /></span><span>SiteTrack <em>Pro</em></span></div>
         <div className="workspace-switch"><span className="workspace-dot" /> Northline Construction <span>⌄</span></div>
         <p className="nav-label">Workspace</p>
         <nav aria-label="Main navigation">
@@ -48,7 +48,7 @@ export default function Home() {
       </aside>
 
       <section className="main-area">
-        <header className="topbar"><div className="mobile-brand"><span className="brand-mark">S</span>SiteTrack <em>Pro</em></div><div className="breadcrumb"><span>Workspace</span><b>/</b><strong>{view}</strong></div><div className="top-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="Toggle dark mode">{dark ? "☼" : "☾"}</button><button className="icon-button notification" onClick={() => notify("You have 3 notifications")}>♧<i>3</i></button><div className="avatar green">AM</div></div></header>
+        <header className="topbar"><div className="mobile-brand"><span className="brand-mark" aria-hidden="true"><span>S</span><i /></span>SiteTrack <em>Pro</em></div><div className="breadcrumb"><span>Workspace</span><b>/</b><strong>{view}</strong></div><div className="top-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="Toggle dark mode">{dark ? "☼" : "☾"}</button><button className="icon-button notification" onClick={() => notify("You have 3 notifications")}>♧<i>3</i></button><div className="avatar green">AM</div></div></header>
         <div className="content">
           <div className="welcome-row"><div><p className="eyebrow">Wednesday, 12 August 2026</p><h1>{view === "Overview" ? "Good morning, Ava" : view}</h1><p className="subhead">{view === "Overview" ? "Here’s what’s happening across your sites today." : `Stay on top of ${view.toLowerCase()} across every active site.`}</p></div><div className="header-actions"><button className="secondary" onClick={() => notify("Report export prepared")}>⇩ Export</button><button className="primary" onClick={() => notify("New project form opened")}>＋ New project</button></div></div>
 
